@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #ffffff;
+    overflow-x: hidden;
+    padding-top: 80px;
+    text-align: center;
+    background-color: #ffcf82;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    z-index: 1000;
+}
+
+nav .logo {
+    width: 80px;
+    transition: transform 0.3s ease;
+}
+
+nav .logo:hover {
+    transform: rotate(360deg);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+.nav-item {
+    font-family: "Playfair Display", serif;
+    color: #333;
+    font-size: 17px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #ff5722;
+    transform: scale(1.1);
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: #ff5722;
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.content {
+    text-align: center;
+    color: #333;
+}
+
+.content h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 160px;
+    font-weight: 800;
+    transition: color 0.5s ease, -webkit-text-stroke 0.5s ease;
+}
+
+.content h1:hover {
+    -webkit-text-stroke: 2px #ff5722;
+    color: transparent;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.content a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 3px solid #ff5722;
+    padding: 0.8%;
+    border-radius: 70px;
+    margin-top: 20px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.content a:hover {
+    background-color: rgba(255, 87, 34, 0.2);
+    color: #ff5722;
+    transform: translateY(-3px);
+}
+
+.bgvideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.places, .about, .booking {
+    padding: 60px 10%;
+    background-color: #ffcf82;
+    color: #333;
+}
+
+.places h1, .about h1, .booking h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ff5722;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"] {
+    background-color: #fff8e1;
+    color: #333;
+}
+
+textarea {
+    background-color: #fff8e1;
+    color: #333;
+    height: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #ff7043;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-content {
+    width: 60%;
+    margin-right: 20px;
+    margin-left: 0%;
+}
+
+.about-image {
+    width: 45%;
+    right: auto;
+    height: 600px;
+}
+/* General Footer Styles */
+footer {
+    background-color: #2c2c2c;
+    color: #dcdcdc;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.deadpool-line {
+    border-top: 2px solid #444;
+    margin-bottom: 10px;
+}
+
+.deadpool-copyright {
+    color: black;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.deadpool-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.deadpool-social li {
+    margin: 0 10px;
+}
+
+.deadpool-social a {
+    display: inline-block;
+}
+
+.deadpool-social img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.deadpool-social img:hover {
+    opacity: 0.8;
+}

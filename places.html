@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Places</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap');
+
+        * {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #ffffff;
+            overflow-x: hidden;
+            padding-top: 80px;
+            text-align: center;
+            background-color: #ffcf82;
+        }
+
+        nav {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #ffffff;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            width: 80px;
+            transition: transform 0.3s ease;
+        }
+
+        nav .logo:hover {
+            transform: rotate(360deg);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul a {
+            text-decoration: none;
+        }
+
+        .nav-item {
+            font-family: "Playfair Display", serif;
+            color: #333;
+            font-size: 17px;
+            text-transform: uppercase;
+            cursor: pointer;
+            position: relative;
+            padding: 5px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-item:hover {
+            color: #ff5722;
+            transform: scale(1.1);
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            height: 2px;
+            width: 0;
+            background: #ff5722;
+            transition: width 0.3s ease;
+        }
+
+        .nav-item:hover::after {
+            width: 100%;
+        }
+
+        .places {
+            padding: 60px 10%;
+            background-color: #ffcf82;
+            color: #333;
+        }
+
+        .places h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #ff5722;
+        }
+
+        .places p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .places .gallery {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 0 auto;
+        }
+
+        .places .gallery-item {
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+
+        .places .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .places .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .places .gallery-item p {
+            font-size: 14px;
+            color: #333;
+            margin-top: 5px;
+        }
+  /* General Footer Styles */
+footer {
+    background-color: #2c2c2c;
+    color: #dcdcdc;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.deadpool-line {
+    border-top: 2px solid #444;
+    margin-bottom: 10px;
+}
+
+.deadpool-copyright {
+    margin: 10px 0;
+    color: black;
+    font-size: 14px;
+}
+
+.deadpool-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.deadpool-social li {
+    margin: 0 10px;
+}
+
+.deadpool-social a {
+    display: inline-block;
+}
+
+.deadpool-social img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.deadpool-social img:hover {
+    opacity: 0.8;
+}
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img src="stuff/401-logo.png" class="logo" />
+        <ul>
+            <a href="index.html">
+                <li class="nav-item">HOME</li>
+            </a>
+            <a href="places.html">
+                <li class="nav-item">POPULAR PLACES</li>
+            </a>
+            <a href="about.html">
+                <li class="nav-item">ABOUT US</li>
+            </a>
+            <a href="booking.html">
+                <li class="nav-item">BOOKING</li>
+            </a>
+        </ul>
+    </nav>
+    <div class="places">
+        <h1>Popular Places</h1>
+        <p>Explore some of the world's most iconic destinations. From stunning landscapes to historic landmarks, these must-visit spots offer something for every traveler.</p>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="stuff/GettyImages-518663755-5a3d62f44e46ba003683656f.jpg" alt="Popular Place 1">
+                <p>Stunning view of the mountains, capturing nature's breathtaking beauty.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="stuff/usa-best-places-new-york.jpg" alt="Popular Place 2">
+                <p>The vibrant cityscape of New York, showcasing its iconic skyline and energy.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="stuff/bakground1.jpeg" alt="Popular Place 3">
+                <p>Majestic canals of Venice, Italy, offering a romantic and historic experience.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="stuff/background2.jpeg" alt="Popular Place 4">
+                <p>The iconic Sydney Opera House and Harbour Bridge, a symbol of Australia's beauty.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="stuff/background3.jpeg" alt="Popular Place 5">
+                <p>Mount Fuji in Japan, a serene and cultural landmark surrounded by natural beauty.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="stuff/background4.jpeg" alt="Popular Place 6">
+                <p>The Eiffel Tower in Paris, a global icon of art, romance, and elegance.</p>
+            </div>
+        </div>
+    </div>
+      <!-- Footer Start -->
+        </div>
+        <div class="deadpool-line"></div>
+        <div class="deadpool-copyright">© 2024 AdventureZone | All Rights Reserved | Managed by Ali Akbar</div>
+        <div class="deadpool-social">
+            <ul>
+                <li><a href="https://facebook.com" target="_blank"><img src="stuff/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://instagram.com" target="_blank"><img src="stuff/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://linkedin.com" target="_blank"><img src="stuff/linkedin.png" alt="LinkedIn"></a></li>
+                <li><a href="https://twitter.com" target="_blank"><img src="stuff/twitter.png" alt="Twitter"></a></li>
+            </ul>
+        </div>
+    </footer>
+    
+<!-- Footer End -->
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <img src="stuff/401-logo.png" class="logo" />
+        <ul>
+            <a href="index.html">
+                <li class="nav-item">HOME</li>
+            </a>
+            <a href="places.html">
+                <li class="nav-item">POPULAR PLACES</li>
+            </a>
+            <a href="about.html">
+                <li class="nav-item">ABOUT US</li>
+            </a>
+            <a href="booking.html">
+                <li class="nav-item">BOOKING</li>
+            </a>
+        </ul>
+    </nav>
+    <div class="booking">
+        <h1>Book Your Tour</h1>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="7983e0c9-62eb-4d1c-827a-929fc0e268bf">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="message">Additional Information:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Submit</button>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <input type="hidden" name="redirect" value="https://i.pinimg.com/originals/7a/a9/e3/7aa9e305ff9b498395f94a75a1d2aaf0.png">
+        </form>
+    </div>
+      <!-- Footer Start -->
+    
+        <div class="deadpool-line"></div>
+        <div class="deadpool-copyright">© 2024 AdventureZone | All Rights Reserved | Managed by Ali Akbar</div>
+        <div class="deadpool-social">
+            <ul>
+                <li><a href="https://facebook.com" target="_blank"><img src="stuff/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://instagram.com" target="_blank"><img src="stuff/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://linkedin.com" target="_blank"><img src="stuff/linkedin.png" alt="LinkedIn"></a></li>
+                <li><a href="https://twitter.com" target="_blank"><img src="stuff/twitter.png" alt="Twitter"></a></li>
+            </ul>
+        </div>
+    </footer>
+    
+<!-- Footer End -->
+
+</body>
+
+</html>
